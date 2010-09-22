@@ -7,11 +7,11 @@ command 'Documentation for Word' do |cmd|
   cmd.invoke do |context|
     word = STDIN.read
     target = `grep -i "^#{word}=" "#{ENV['TM_BUNDLE_SUPPORT']}/documentation.txt"`
-    if target
+    if target && !target.empty?
       target=target.split("=")[1]
       url = "http://php.net/manual/en/" + target
     else
-      target="function.\${#{word}//_/-}"
+      target="function.#{word}"
       url = "http://php.net/manual/en/" + target
     end
     # This is a hack to open the internal browser and point it to the php.net page.
