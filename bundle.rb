@@ -82,3 +82,11 @@ END
     end
   end
 end
+
+# Special ENV vars for PHP scope
+env 'source.php' do |e|
+  e['TM_COMMENT_START'] = '// '
+  e['TM_COMMENT_START_2'] = '# '
+  e['TM_COMMENT_START_3'] = '/* '
+  e['TM_COMMENT_END_3'] = '*/'
+end
