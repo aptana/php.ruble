@@ -45,11 +45,6 @@ with_defaults :scope => 'source.php source.php.embedded.block.html' do
     s.expansion = '\$GLOBALS[\'${1:variable}\']${2: = }${3:something}${4:;}$0'
   end
   
-  snippet '?>...<?php' do |s|
-    s.trigger = 'php'
-    s.expansion = '?>$0<?${TM_PHP_OPEN_TAG:php}'
-  end
-  
   snippet 'class ...' do |s|
     s.trigger = 'class'
     s.expansion = '/**

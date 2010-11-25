@@ -1,7 +1,7 @@
 require 'ruble'
 
 bundle 'PHP' do |bundle|
-  bundle.author = 'Ciar‡n Walsh'
+  bundle.author = 'Ciarï¿½n Walsh'
   bundle.contact_email_rot_13 = 'pvnjny@tznvy.pbz'
   bundle.description =  <<END
 <a href="http://www.php.net/">PHP</a> is a widely-used general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
@@ -38,8 +38,6 @@ END
       submenu.command 'do ... while ...'
       submenu.command 'class ...'
       submenu.command 'function ...'
-      submenu.separator
-      submenu.command '?>...<?php'
       submenu.separator
       submenu.command 'Throw Exception'
       # submenu.command 'Wrap in try { ... } catch (...) { ... }'
