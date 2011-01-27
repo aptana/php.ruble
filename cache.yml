@@ -356,7 +356,7 @@ children:
   displayName: PHP
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-1de6667a-be2c-4371-a4f5-60fabdff4f1f,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-6dcc4496-eff3-42cb-9a83-c4cc6de77044,
   path: bundle.rb, scope: source.php}
 - !!com.aptana.scripting.model.CommandElement
   async: false
