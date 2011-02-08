@@ -356,12 +356,13 @@ children:
   displayName: PHP
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-6dcc4496-eff3-42cb-9a83-c4cc6de77044,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-e967d707-6dfc-41ad-8452-d20cfb1ed889,
   path: bundle.rb, scope: source.php}
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Documentation for Tag
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
@@ -376,6 +377,7 @@ children:
   customProperties:
     prefix_values: [source.php]
   displayName: Insert Call to Parent
+  input: [document]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -388,6 +390,7 @@ children:
   async: false
   customProperties: null
   displayName: Documentation for Word
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
@@ -397,14 +400,25 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Help, inputPath: null, keyBindingMap: null, outputPath: null, outputType: show_as_html,
-  path: commands/phpdoc_help.rb, runType: current_thread, scope: source.php, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Help
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_html
+  path: commands/phpdoc_help.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [source.php]
   displayName: Post-doc
+  input: [document, undefined]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -417,6 +431,7 @@ children:
   async: false
   customProperties: null
   displayName: Run
+  input: [document]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+R]
@@ -430,6 +445,7 @@ children:
   async: false
   customProperties: null
   displayName: 'Special: Return Inside an Empty Tag'
+  input: [selection, undefined]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [ENTER]
@@ -443,6 +459,7 @@ children:
   async: false
   customProperties: null
   displayName: Validate Syntax
+  input: [document]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M4+M2+V]
@@ -452,16 +469,26 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Wrap Docblock at 80 Characters, inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: insert_as_text, path: commands/wrap_docblock_at_80_characters.rb,
-  runType: current_thread, scope: comment.block.documentation.phpdoc.php, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Wrap Docblock at 80 Characters
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_text
+  path: commands/wrap_docblock_at_80_characters.rb
+  runType: current_thread
+  scope: comment.block.documentation.phpdoc.php
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
   customProperties:
     prefix_values: [$_]
   displayName: COOKIE['...']
   expansion: \$_COOKIE['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -476,6 +503,7 @@ children:
     prefix_values: [$_]
   displayName: ENV['...']
   expansion: \$_ENV['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -490,6 +518,7 @@ children:
     prefix_values: [$_]
   displayName: FILES['...']
   expansion: \$_FILES['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -504,6 +533,7 @@ children:
     prefix_values: [$_]
   displayName: GET['...']
   expansion: \$_GET['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -518,6 +548,7 @@ children:
     prefix_values: [$_]
   displayName: POST['...']
   expansion: \$_POST['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -532,6 +563,7 @@ children:
     prefix_values: [$_]
   displayName: REQUEST['...']
   expansion: \$_REQUEST['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -546,6 +578,7 @@ children:
     prefix_values: [$_]
   displayName: SERVER['...']
   expansion: \$_SERVER['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -560,6 +593,7 @@ children:
     prefix_values: [$_]
   displayName: SESSION['...']
   expansion: \$_SESSION['${1:variable}']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -574,6 +608,7 @@ children:
     prefix_values: [globals]
   displayName: $GLOBALS['...']
   expansion: '\$GLOBALS[''${1:variable}'']${2: = }${3:something}${4:;}$0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -590,6 +625,7 @@ children:
   expansion: "/**\n * $1\n */\nclass ${2:ClassName} extends ${3:AnotherClass} {\n\
     \  $4\n  function ${5:__construct}(${6:$argument}) {\n    ${0:// code...}\n  }\n\
     }\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -606,6 +642,7 @@ children:
   expansion: 'define(''$1'', ''$2'');
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -620,6 +657,7 @@ children:
     prefix_values: ['def?']
   displayName: defined(...)
   expansion: defined('$1')$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -634,6 +672,7 @@ children:
     prefix_values: [do]
   displayName: do ... while ...
   expansion: "do {\n  ${0:// code...}\n} while (${1:$a <= 10});"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -648,6 +687,7 @@ children:
     prefix_values: [echo]
   displayName: echo "..."
   expansion: echo "${1:string}"${0};
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -662,6 +702,7 @@ children:
     prefix_values: [else]
   displayName: else ...
   expansion: "else {\n  ${0:// code...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -676,6 +717,7 @@ children:
     prefix_values: [elseif]
   displayName: elseif ...
   expansion: "elseif (${1:condition}) {\n  ${0:// code...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -691,6 +733,7 @@ children:
   displayName: for ...
   expansion: "for (\\$${1:i}=${2:0}; \\$${1:i} < $3; \\$${1:i}++) { \n  ${0:// code...}\n\
     }"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -706,6 +749,7 @@ children:
   displayName: foreach ...
   expansion: "foreach (\\$${1:variable} as \\$${2:key} => \\$${3:value}) {\n  ${0://\
     \ code...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -721,6 +765,7 @@ children:
   displayName: function ...
   expansion: "${1:public }function ${2:functionName}(\\$${3:value}${4:=''})\n{\n \
     \ ${0:// code...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -741,6 +786,7 @@ children:
     $1;
 
     '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -755,6 +801,7 @@ children:
     prefix_values: ['if?']
   displayName: '$... = ( ... ) ? ... : ...'
   expansion: '\$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b} ;'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -770,6 +817,7 @@ children:
   displayName: if ... else ...
   expansion: "if (${1:condition}) {\n  ${2:// code...}\n} else {\n  ${3:// code...}\n\
     }\n$0"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -784,6 +832,7 @@ children:
     prefix_values: [if]
   displayName: if ...
   expansion: "if (${1:condition}) {\n  ${0:// code...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -798,6 +847,7 @@ children:
     prefix_values: [incl]
   displayName: include ...
   expansion: include '${1:file}';$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -812,6 +862,7 @@ children:
     prefix_values: [incl1]
   displayName: include_once ...
   expansion: include_once '${1:file}';$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -826,6 +877,7 @@ children:
     prefix_values: [array]
   displayName: $... = array (...)
   expansion: \$${1:arrayName} = array('$2' => ${3:,} $0);
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -841,6 +893,7 @@ children:
   displayName: Class Variable
   expansion: "/**\n * ${3:undocumented class variable}\n *\n * @var ${4:string}\n\
     \ */\n${1:var} \\$$2;$0"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -856,6 +909,7 @@ children:
   displayName: Class
   expansion: "/**\n * ${3:undocumented class}\n *\n * @package ${4:default}\n * @author\
     \ ${PHPDOC_AUTHOR} $5\n */\nclass ${1:ClassName} {$0\n} // END"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -870,6 +924,7 @@ children:
     prefix_values: [doc_d]
   displayName: Constant Definition
   expansion: "/**\n * ${3:undocumented constant}\n */\ndefine($1, $2);$0"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -885,6 +940,7 @@ children:
   displayName: Function Signature
   expansion: "/**\n * ${4:undocumented function}\n *\n * @return ${5:void}\n * @author\
     \ ${PHPDOC_AUTHOR} $6\n */\nfunction ${1:functionName}($2);$0"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -900,6 +956,7 @@ children:
   displayName: Function
   expansion: "/**\n * ${4:undocumented function}\n *\n * @return ${5:void}\n * @author\
     \ ${PHPDOC_AUTHOR} $6\n */\nfunction ${1:functionName}($2) {$0\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -916,6 +973,7 @@ children:
   expansion: "/**\n * $1\n *\n * @author ${PHPDOC_AUTHOR}\n * @version \\$Id\\$\n\
     \ * @copyright $2\n * @package ${3:default}\n */\n\n/**\n * Define DocBlock\n\
     \ */\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -932,6 +990,7 @@ children:
   expansion: "/**\n * ${2:undocumented interface}\n *\n * @package ${3:default}\n\
     \ * @author ${PHPDOC_AUTHOR} $4\n */\ninterface ${1:InterfaceName} {$0\n} // END\
     \ interface $1"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -946,6 +1005,7 @@ children:
     prefix_values: [req]
   displayName: require ...
   expansion: require '${1:file}';$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -960,6 +1020,7 @@ children:
     prefix_values: [req1]
   displayName: require_once ...
   expansion: require_once '${1:file}';$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -974,6 +1035,7 @@ children:
     prefix_values: [ret]
   displayName: return
   expansion: return$1;$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -988,6 +1050,7 @@ children:
     prefix_values: [ret0]
   displayName: return false
   expansion: return false;$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1002,6 +1065,7 @@ children:
     prefix_values: [ret1]
   displayName: return true
   expansion: return true;$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1016,6 +1080,7 @@ children:
     prefix_values: [/**]
   displayName: Start Docblock
   expansion: "/**\n * $0\n */"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1030,6 +1095,7 @@ children:
     prefix_values: [case]
   displayName: case ...
   expansion: "case '${1:variable}':\n  ${0:// code...}\n  break;"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1045,6 +1111,7 @@ children:
   displayName: switch ...
   expansion: "switch (${1:variable}) {\n  case '${2:value}':\n    ${3:// code...}\n\
     \    break;\n  $0\n  default:\n    ${4:// code...}\n    break;\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1061,6 +1128,7 @@ children:
   expansion: 'throw new ${1:Exception}(${2:"Error Processing Request"}, ${3:1});
 
     $0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1075,6 +1143,7 @@ children:
     prefix_values: [while]
   displayName: while ...
   expansion: "while (${1:$a <= 10}) {\n  ${0:// code...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1089,6 +1158,7 @@ children:
     prefix_values: [php]
   displayName: <?php ... ?>
   expansion: <?${TM_PHP_OPEN_TAG:php} $0 ?>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1103,6 +1173,7 @@ children:
     prefix_values: [this]
   displayName: <?php $this->... ?>
   expansion: <?${TM_PHP_OPEN_TAG:php} \$this->$0 ?>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1117,6 +1188,7 @@ children:
     prefix_values: [echo]
   displayName: <?php echo ... ?>
   expansion: <?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} ${1:\$var} ?>$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1131,6 +1203,7 @@ children:
     prefix_values: [echoh]
   displayName: <?php echo htmlentities(...) ?>
   expansion: <?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} htmlentities(${1:\$var}, ENT_QUOTES, 'utf-8') ?>$0
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1145,6 +1218,7 @@ children:
     prefix_values: [else]
   displayName: '<?php else: ?>'
   expansion: '<?${TM_PHP_OPEN_TAG:php} else: ?>'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1160,6 +1234,7 @@ children:
   displayName: <?php foreach (...) ... <?php endforeach ?>
   expansion: "<?${TM_PHP_OPEN_TAG:php} foreach (\\$${1:variable} as \\$${2:key} =>\
     \ \\$${3:value}): ?>\n  ${0}\n<?${TM_PHP_OPEN_TAG:php} endforeach ?>"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1175,6 +1250,7 @@ children:
   displayName: <?php if (...) ?> ... <?php else ?> ... <?php endif ?>
   expansion: "<?${TM_PHP_OPEN_TAG:php} if (${1:condition}): ?>\n  $2\n<?${TM_PHP_OPEN_TAG:php}\
     \ else: ?>\n  $0\n<?${TM_PHP_OPEN_TAG:php} endif ?>"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1190,6 +1266,7 @@ children:
   displayName: <?php if (...) ?> ... <?php endif ?>
   expansion: "<?${TM_PHP_OPEN_TAG:php} if (${1:condition}): ?>\n  $0\n<?${TM_PHP_OPEN_TAG:php}\
     \ endif ?>"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1204,6 +1281,7 @@ children:
     prefix_values: [ethis]
   displayName: <?php echo $this->... ?>
   expansion: <?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} \$this->$0 ?>
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -1217,6 +1295,7 @@ children:
   customProperties: null
   displayName: 'Special: Return Between PHP Tags'
   expansion: "\n\t$0\n"
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [ENTER]
@@ -1226,10 +1305,20 @@ children:
   runType: current_thread
   scope: meta.consecutive-tags.php
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
-  displayName: PHP Template, filetype: '*.php', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: PHP Template
+  filetype: '*.php'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 copyright: null
 customProperties: {contact_email_rot_13: pvnjny@tznvy.pbz}
 decreaseIndentMarkers: &id002 {}
