@@ -51,10 +51,10 @@ with_defaults :scope => 'source.php source.php.embedded.block.html' do
  * $1
  */
 class ${2:ClassName} extends ${3:AnotherClass} {
-  $4
-  function ${5:__construct}(${6:$argument}) {
-    ${0:// code...}
-  }
+	$4
+	function ${5:__construct}(${6:$argument}) {
+		${0:// code...}
+	}
 }
 '
   end
@@ -73,7 +73,7 @@ $0'
   snippet 'do ... while ...' do |s|
     s.trigger = 'do'
     s.expansion = 'do {
-  ${0:// code...}
+	${0:// code...}
 } while (${1:$a <= 10});'
   end
   
@@ -85,28 +85,28 @@ $0'
   snippet 'else ...' do |s|
     s.trigger = 'else'
     s.expansion = 'else {
-  ${0:// code...}
+	${0:// code...}
 }'
   end
   
   snippet 'elseif ...' do |s|
     s.trigger = 'elseif'
   s.expansion = 'elseif (${1:condition}) {
-  ${0:// code...}
+	${0:// code...}
 }'
   end
   
   snippet 'for ...' do |s|
     s.trigger = 'for'
   s.expansion = 'for (\$${1:i}=${2:0}; \$${1:i} < $3; \$${1:i}++) { 
-  ${0:// code...}
+	${0:// code...}
 }'
   end
   
   snippet 'foreach ...' do |s|
     s.trigger = 'foreach'
   s.expansion = 'foreach (\$${1:variable} as \$${2:key} => \$${3:value}) {
-  ${0:// code...}
+	${0:// code...}
 }'
   end
   
@@ -114,7 +114,7 @@ $0'
     s.trigger = 'fun'
   s.expansion = '${1:public }function ${2:functionName}(\$${3:value}${4:=\'\'})
 {
-  ${0:// code...}
+	${0:// code...}
 }'
   end
   
@@ -134,9 +134,9 @@ $1;
   snippet 'if ... else ...' do |s|
     s.trigger = 'ifelse'
     s.expansion = 'if (${1:condition}) {
-  ${2:// code...}
+	${2:// code...}
 } else {
-  ${3:// code...}
+	${3:// code...}
 }
 $0'
   end
@@ -144,7 +144,7 @@ $0'
   snippet 'if ...' do |s|
     s.trigger = 'if'
     s.expansion = 'if (${1:condition}) {
-  ${0:// code...}
+	${0:// code...}
 }'
   end
   
@@ -280,20 +280,20 @@ interface ${1:InterfaceName} {$0
   snippet 'case ...' do |s|
     s.trigger = 'case'
     s.expansion = 'case \'${1:variable}\':
-  ${0:// code...}
-  break;'
+	${0:// code...}
+	break;'
   end
   
   snippet 'switch ...' do |s|
     s.trigger = 'switch'
     s.expansion = 'switch (${1:variable}) {
-  case \'${2:value}\':
-    ${3:// code...}
-    break;
-  $0
-  default:
-    ${4:// code...}
-    break;
+	case \'${2:value}\':
+		${3:// code...}
+		break;
+	$0
+	default:
+		${4:// code...}
+		break;
 }'
   end
   
@@ -306,7 +306,7 @@ $0'
   snippet 'while ...' do |s|
     s.trigger = 'while'
     s.expansion = 'while (${1:$a <= 10}) {
-  ${0:// code...}
+	${0:// code...}
 }'
   end
 end
@@ -341,23 +341,23 @@ with_defaults :scope => 'text.html - source' do
   snippet '<?php foreach (...) ... <?php endforeach ?>' do |s|
     s.trigger = 'foreach'
     s.expansion = '<?${TM_PHP_OPEN_TAG:php} foreach (\$${1:variable} as \$${2:key} => \$${3:value}): ?>
-  ${0}
+	${0}
 <?${TM_PHP_OPEN_TAG:php} endforeach ?>'
   end
   
   snippet '<?php if (...) ?> ... <?php else ?> ... <?php endif ?>' do |s|
     s.trigger = 'ifelse'
     s.expansion = '<?${TM_PHP_OPEN_TAG:php} if (${1:condition}): ?>
-  $2
+	$2
 <?${TM_PHP_OPEN_TAG:php} else: ?>
-  $0
+	$0
 <?${TM_PHP_OPEN_TAG:php} endif ?>'
   end
   
   snippet '<?php if (...) ?> ... <?php endif ?>' do |s|
     s.trigger = 'if'
     s.expansion = '<?${TM_PHP_OPEN_TAG:php} if (${1:condition}): ?>
-  $0
+	$0
 <?${TM_PHP_OPEN_TAG:php} endif ?>'
   end
 end
