@@ -1,6 +1,6 @@
 require 'ruble'
 command 'Documentation for Word' do |cmd|
-  cmd.key_binding = 'CONTROL+H'
+  #cmd.key_binding = 'M4+H'
   cmd.scope = 'source.php'
   cmd.output = :show_as_html
   cmd.input = :selection, :word

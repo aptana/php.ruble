@@ -356,7 +356,7 @@ children:
   displayName: PHP
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-cd1fa8c0-a278-48d4-9a65-4c2400b41304,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-84008aee-66ac-4b60-a1fa-4820d13ba759,
   path: bundle.rb, scope: source.php}
 - !!com.aptana.scripting.model.CommandElement
   async: false
@@ -392,8 +392,7 @@ children:
   displayName: Documentation for Word
   input: [selection, word]
   inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
+  keyBindingMap: null
   outputPath: null
   outputType: show_as_html
   path: commands/lookup_word_in_php_manual.rb
