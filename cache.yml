@@ -364,8 +364,7 @@ children:
   displayName: Documentation for Tag
   input: [selection, word]
   inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+H]
+  keyBindingMap: null
   outputPath: null
   outputType: show_as_html
   path: commands/documentation_for_tag.rb

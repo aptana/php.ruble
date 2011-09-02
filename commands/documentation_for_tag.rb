@@ -1,7 +1,7 @@
 require 'ruble'
 
 command 'Documentation for Tag' do |cmd|
-  cmd.key_binding = 'CONTROL+H'
+  #cmd.key_binding = 'M4+H'
   cmd.scope = 'comment.block.documentation.phpdoc.php'
   cmd.output = :show_as_html
   cmd.input = :selection, :word
