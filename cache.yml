@@ -1,6 +1,129 @@
 !!com.aptana.scripting.model.BundleElement
 author: Ciarón Walsh
 children:
+- !command
+  async: false
+  customProperties:
+    prefix_values: [source.php]
+  displayName: Insert Call to Parent
+  input: [document]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: commands/insert_call_to_parent.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Documentation for Word
+  input: [selection, word]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_html
+  path: commands/lookup_word_in_php_manual.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Help
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_html
+  path: commands/phpdoc_help.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties:
+    prefix_values: [source.php]
+  displayName: Post-doc
+  input: [document, undefined]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_text
+  path: commands/post-doc.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Run
+  input: [document]
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+R]
+  outputPath: null
+  outputType: show_as_html
+  path: commands/run_php.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: 'Special: Return Inside an Empty Tag'
+  input: [selection, undefined]
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [ENTER]
+  outputPath: null
+  outputType: insert_as_snippet
+  path: commands/special__return_inside_an_empty_tag.rb
+  runType: current_thread
+  scope: source.php.embedded.line.empty.html source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Validate Syntax
+  input: [document]
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M4+M2+V]
+  outputPath: null
+  outputType: show_as_tooltip
+  path: commands/validate_syntax.rb
+  runType: current_thread
+  scope: source.php
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Wrap Docblock at 80 Characters
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_text
+  path: commands/wrap_docblock_at_80_characters.rb
+  runType: current_thread
+  scope: comment.block.documentation.phpdoc.php
+  workingDirectoryType: UNDEFINED
+- !template
+  async: false
+  customProperties: null
+  displayName: PHP Template
+  filetype: '*.php'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.MenuElement
   children:
   - children: &id001 []
@@ -356,130 +479,8 @@ children:
   displayName: PHP
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-103498f2-d819-4af1-b7aa-47efa24b1cb3,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-0308215f-2c4d-44dd-b632-977c2ba04a2a,
   path: bundle.rb, scope: source.php}
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Documentation for Tag
-  input: [selection, word]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_html
-  path: commands/documentation_for_tag.rb
-  runType: current_thread
-  scope: comment.block.documentation.phpdoc.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties:
-    prefix_values: [source.php]
-  displayName: Insert Call to Parent
-  input: [document]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: commands/insert_call_to_parent.rb
-  runType: current_thread
-  scope: source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Documentation for Word
-  input: [selection, word]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_html
-  path: commands/lookup_word_in_php_manual.rb
-  runType: current_thread
-  scope: source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Help
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_html
-  path: commands/phpdoc_help.rb
-  runType: current_thread
-  scope: source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties:
-    prefix_values: [source.php]
-  displayName: Post-doc
-  input: [document, undefined]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_text
-  path: commands/post-doc.rb
-  runType: current_thread
-  scope: source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Run
-  input: [document]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+R]
-  outputPath: null
-  outputType: show_as_html
-  path: commands/run_php.rb
-  runType: current_thread
-  scope: source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: 'Special: Return Inside an Empty Tag'
-  input: [selection, undefined]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [ENTER]
-  outputPath: null
-  outputType: insert_as_snippet
-  path: commands/special__return_inside_an_empty_tag.rb
-  runType: current_thread
-  scope: source.php.embedded.line.empty.html source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Validate Syntax
-  input: [document]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [M4+M2+V]
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/validate_syntax.rb
-  runType: current_thread
-  scope: source.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Wrap Docblock at 80 Characters
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_text
-  path: commands/wrap_docblock_at_80_characters.rb
-  runType: current_thread
-  scope: comment.block.documentation.phpdoc.php
-  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
   customProperties:
@@ -493,7 +494,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -508,7 +509,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -523,7 +524,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -538,7 +539,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -553,7 +554,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -568,7 +569,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -583,7 +584,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -598,7 +599,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -613,7 +614,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -630,7 +631,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -647,7 +648,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -662,7 +663,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -677,7 +678,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -692,7 +693,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -707,7 +708,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -722,7 +723,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -738,7 +739,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -754,7 +755,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -770,7 +771,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -791,7 +792,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -806,7 +807,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -822,7 +823,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -837,7 +838,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -852,7 +853,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -867,7 +868,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -882,7 +883,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -898,7 +899,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -914,7 +915,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -929,7 +930,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -945,7 +946,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -961,7 +962,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -978,7 +979,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -995,7 +996,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1010,7 +1011,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1025,7 +1026,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1040,7 +1041,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1055,7 +1056,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1070,7 +1071,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1085,7 +1086,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1100,7 +1101,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1116,7 +1117,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1133,7 +1134,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1148,7 +1149,7 @@ children:
   outputType: insert_as_snippet
   path: snippets/snippets.rb
   runType: current_thread
-  scope: source.php source.php.embedded.block.html
+  scope: source.php
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
@@ -1171,6 +1172,21 @@ children:
     prefix_values: [this]
   displayName: <?php $this->... ?>
   expansion: <?${TM_PHP_OPEN_TAG:php} \$this->$0 ?>
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: text.html - source
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [ethis]
+  displayName: <?php echo $this->... ?>
+  expansion: <?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} \$this->$0 ?>
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -1273,64 +1289,20 @@ children:
   runType: current_thread
   scope: text.html - source
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [ethis]
-  displayName: <?php echo $this->... ?>
-  expansion: <?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} \$this->$0 ?>
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: text.html - source
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties: null
-  displayName: 'Special: Return Between PHP Tags'
-  expansion: "\n\t$0\n"
-  input: [none]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [ENTER]
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: meta.consecutive-tags.php
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement
-  async: false
-  customProperties: null
-  displayName: PHP Template
-  filetype: '*.php'
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: discard
-  path: templates/templates.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
 copyright: null
 customProperties: {contact_email_rot_13: pvnjny@tznvy.pbz}
-decreaseIndentMarkers: &id002 {}
+decreaseIndentMarkers: {}
 description: '<a href="http://www.php.net/">PHP</a> is a widely-used general-purpose
   scripting language that is especially suited for web development and can be embedded
   into HTML.
 
   '
 displayName: PHP
-fileTypeRegistry: *id002
-fileTypes: *id001
+fileTypeRegistry: {}
+fileTypes: []
 foldingStartMarkers: {!scope 'source.php': !regexp '(?-mix:(\/\*|\{\s*$|<<<HTML))'}
 foldingStopMarkers: {!scope 'source.php': !regexp '(?-mix:(\*\/|^\s*\}|^HTML;))'}
-increaseIndentMarkers: *id002
+increaseIndentMarkers: {}
 license: null
 licenseUrl: null
 path: bundle.rb

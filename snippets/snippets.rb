@@ -1,46 +1,46 @@
-with_defaults :scope => 'source.php source.php.embedded.block.html' do
+with_defaults :scope => 'source.php' do
   
-  snippet 'COOKIE[\'...\']' do |s|
+  snippet "COOKIE['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_COOKIE[\'${1:variable}\']'
   end
   
-  snippet 'ENV[\'...\']' do |s|
+  snippet "ENV['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_ENV[\'${1:variable}\']'
   end
   
-  snippet 'FILES[\'...\']' do |s|
+  snippet "FILES['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_FILES[\'${1:variable}\']'
   end
   
-  snippet 'GET[\'...\']' do |s|
+  snippet "GET['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_GET[\'${1:variable}\']'
   end
   
-  snippet 'POST[\'...\']' do |s|
+  snippet "POST['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_POST[\'${1:variable}\']'
   end
   
-  snippet 'REQUEST[\'...\']' do |s|
+  snippet "REQUEST['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_REQUEST[\'${1:variable}\']'
   end
   
-  snippet 'SERVER[\'...\']' do |s|
+  snippet "SERVER['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_SERVER[\'${1:variable}\']'
   end
   
-  snippet 'SESSION[\'...\']' do |s|
+  snippet "SESSION['...']" do |s|
     s.trigger = '$_'
     s.expansion = '\$_SESSION[\'${1:variable}\']'
   end
   
-  snippet '$GLOBALS[\'...\']' do |s|
+  snippet "$GLOBALS['...']" do |s|
     s.trigger = 'globals'
     s.expansion = '\$GLOBALS[\'${1:variable}\']${2: = }${3:something}${4:;}$0'
   end
@@ -323,6 +323,11 @@ with_defaults :scope => 'text.html - source' do
     s.expansion = '<?${TM_PHP_OPEN_TAG:php} \$this->$0 ?>'
   end
   
+  snippet '<?php echo $this->... ?>' do |s|
+    s.trigger = 'ethis'
+    s.expansion = '<?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} \$this->$0 ?>'
+  end
+
   snippet '<?php echo ... ?>' do |s|
     s.trigger = 'echo'
     s.expansion = '<?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} ${1:\$var} ?>$0'
@@ -362,22 +367,7 @@ with_defaults :scope => 'text.html - source' do
   end
 end
 
-snippet '<?php echo $this->... ?>' do |s|
-  s.trigger = 'ethis'
-  s.scope = 'text.html - source'
-  s.expansion = '<?${TM_PHP_OPEN_TAG_WITH_ECHO:php echo} \$this->$0 ?>'
-end
-
-snippet 'Special: Return Between PHP Tags' do |s|
-  # FIXME No tab trigger, probably needs to become command
-  s.key_binding = 'ENTER'
-  s.scope = 'meta.consecutive-tags.php'
-  s.expansion = '
-	$0
-'
-end
-
-# 
+# FIXME Needs to be converted to a command that outputs a snippet.
 # snippet 'Wrap in try { ... } catch (...) { ... }' do |s|
 #   s.trigger = 'try'
 #   s.key_binding = 'M1+M2+M3+W'
