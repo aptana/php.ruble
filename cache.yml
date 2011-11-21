@@ -932,6 +932,19 @@ children:
   runType: current_thread
   scope: text.html - source
   workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Documentation for Tag
+  input: [selection, word]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_html
+  path: commands/documentation_for_tag.rb
+  runType: current_thread
+  scope: comment.block.documentation.phpdoc.php
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.MenuElement
   children:
   - children: &id001 []
@@ -1287,21 +1300,8 @@ children:
   displayName: PHP
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-fb91f482-6094-477c-87b7-b42a9a351d69,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-145ab7e0-4ece-481e-a3c9-67efa0f57308,
   path: bundle.rb, scope: source.php}
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Documentation for Tag
-  input: [selection, word]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_html
-  path: commands/documentation_for_tag.rb
-  runType: current_thread
-  scope: comment.block.documentation.phpdoc.php
-  workingDirectoryType: UNDEFINED
 copyright: null
 customProperties: {contact_email_rot_13: pvnjny@tznvy.pbz}
 decreaseIndentMarkers: {}
@@ -1319,5 +1319,5 @@ increaseIndentMarkers: {}
 license: null
 licenseUrl: null
 path: bundle.rb
-repository: null
+repository: git://github.com/aptana/php.ruble.git
 visible: true
