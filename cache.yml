@@ -1,7 +1,20 @@
 !!com.aptana.scripting.model.BundleElement
 author: Ciarón Walsh
 children:
-- !command
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Documentation for Tag
+  input: [selection, word]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_html
+  path: commands/documentation_for_tag.rb
+  runType: current_thread
+  scope: comment.block.documentation.phpdoc.php
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [source.php]
@@ -15,7 +28,7 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Documentation for Word
@@ -28,7 +41,7 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Help
@@ -41,7 +54,7 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties:
     prefix_values: [source.php]
@@ -55,7 +68,7 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Run
@@ -69,7 +82,7 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: 'Special: Return Inside an Empty Tag'
@@ -83,7 +96,7 @@ children:
   runType: current_thread
   scope: source.php.embedded.line.empty.html source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Validate Syntax
@@ -97,7 +110,7 @@ children:
   runType: current_thread
   scope: source.php
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Wrap Docblock at 80 Characters
@@ -110,377 +123,6 @@ children:
   runType: current_thread
   scope: comment.block.documentation.phpdoc.php
   workingDirectoryType: UNDEFINED
-- !template
-  async: false
-  customProperties: null
-  displayName: PHP Template
-  filetype: '*.php'
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: discard
-  path: templates/templates.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.MenuElement
-  children:
-  - children: &id001 []
-    commandName: Documentation for Word
-    customProperties: null
-    displayName: Documentation for Word
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: '-'
-    customProperties: null
-    displayName: '-'
-    path: bundle.rb
-    scope: null
-  - children:
-    - children:
-      - children: *id001
-        commandName: <?php ... ?>
-        customProperties: null
-        displayName: <?php ... ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php echo ... ?>
-        customProperties: null
-        displayName: <?php echo ... ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php echo htmlentities(...) ?>
-        customProperties: null
-        displayName: <?php echo htmlentities(...) ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php if (...) ?> ... <?php endif ?>
-        customProperties: null
-        displayName: <?php if (...) ?> ... <?php endif ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php if (...) ?> ... <?php else ?> ... <?php endif ?>
-        customProperties: null
-        displayName: <?php if (...) ?> ... <?php else ?> ... <?php endif ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: '<?php else: ?>'
-        customProperties: null
-        displayName: '<?php else: ?>'
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php foreach (...) ... <?php endforeach ?>
-        customProperties: null
-        displayName: <?php foreach (...) ... <?php endforeach ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php $this->... ?>
-        customProperties: null
-        displayName: <?php $this->... ?>
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: <?php echo $this->... ?>
-        customProperties: null
-        displayName: <?php echo $this->... ?>
-        path: bundle.rb
-        scope: null
-      commandName: Wrapped in <?php ?>
-      customProperties: null
-      displayName: Wrapped in <?php ?>
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: if ...
-      customProperties: null
-      displayName: if ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: if ... else ...
-      customProperties: null
-      displayName: if ... else ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: else ...
-      customProperties: null
-      displayName: else ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: elseif ...
-      customProperties: null
-      displayName: elseif ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: for ...
-      customProperties: null
-      displayName: for ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: foreach ...
-      customProperties: null
-      displayName: foreach ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: switch ...
-      customProperties: null
-      displayName: switch ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: case ...
-      customProperties: null
-      displayName: case ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: while ...
-      customProperties: null
-      displayName: while ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: do ... while ...
-      customProperties: null
-      displayName: do ... while ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: class ...
-      customProperties: null
-      displayName: class ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: function ...
-      customProperties: null
-      displayName: function ...
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Throw Exception
-      customProperties: null
-      displayName: Throw Exception
-      path: bundle.rb
-      scope: null
-    commandName: Declarations
-    customProperties: null
-    displayName: Declarations
-    path: bundle.rb
-    scope: null
-  - children:
-    - children: *id001
-      commandName: $GLOBALS['...']
-      customProperties: null
-      displayName: $GLOBALS['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: COOKIE['...']
-      customProperties: null
-      displayName: COOKIE['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: ENV['...']
-      customProperties: null
-      displayName: ENV['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: FILES['...']
-      customProperties: null
-      displayName: FILES['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: GET['...']
-      customProperties: null
-      displayName: GET['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: POST['...']
-      customProperties: null
-      displayName: POST['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: REQUEST['...']
-      customProperties: null
-      displayName: REQUEST['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: SERVER['...']
-      customProperties: null
-      displayName: SERVER['...']
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: SESSION['...']
-      customProperties: null
-      displayName: SESSION['...']
-      path: bundle.rb
-      scope: null
-    commandName: Globals
-    customProperties: null
-    displayName: Globals
-    path: bundle.rb
-    scope: null
-  - children:
-    - children: *id001
-      commandName: return
-      customProperties: null
-      displayName: return
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: return true
-      customProperties: null
-      displayName: return true
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: return false
-      customProperties: null
-      displayName: return false
-      path: bundle.rb
-      scope: null
-    commandName: Return
-    customProperties: null
-    displayName: Return
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: '-'
-    customProperties: null
-    displayName: '-'
-    path: bundle.rb
-    scope: null
-  - children:
-    - children: *id001
-      commandName: Documentation for Tag
-      customProperties: null
-      displayName: Documentation for Tag
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Start Docblock
-      customProperties: null
-      displayName: Start Docblock
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Class
-      customProperties: null
-      displayName: Class
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Class Variable
-      customProperties: null
-      displayName: Class Variable
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Constant Definition
-      customProperties: null
-      displayName: Constant Definition
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Function
-      customProperties: null
-      displayName: Function
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Function Signature
-      customProperties: null
-      displayName: Function Signature
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: '-'
-      customProperties: null
-      displayName: '-'
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Header
-      customProperties: null
-      displayName: Header
-      path: bundle.rb
-      scope: null
-    - children: *id001
-      commandName: Interface
-      customProperties: null
-      displayName: Interface
-      path: bundle.rb
-      scope: null
-    commandName: PHPDoc
-    customProperties: null
-    displayName: PHPDoc
-    path: bundle.rb
-    scope: null
-  commandName: PHP
-  customProperties: null
-  displayName: PHP
-  path: bundle.rb
-  scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-0308215f-2c4d-44dd-b632-977c2ba04a2a,
-  path: bundle.rb, scope: source.php}
 - !!com.aptana.scripting.model.SnippetElement
   async: false
   customProperties:
@@ -1289,22 +931,393 @@ children:
   runType: current_thread
   scope: text.html - source
   workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: PHP Template
+  filetype: '*.php'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.MenuElement
+  children:
+  - children: &id001 []
+    commandName: Documentation for Word
+    customProperties: null
+    displayName: Documentation for Word
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children:
+      - children: *id001
+        commandName: <?php ... ?>
+        customProperties: null
+        displayName: <?php ... ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php echo ... ?>
+        customProperties: null
+        displayName: <?php echo ... ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php echo htmlentities(...) ?>
+        customProperties: null
+        displayName: <?php echo htmlentities(...) ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php if (...) ?> ... <?php endif ?>
+        customProperties: null
+        displayName: <?php if (...) ?> ... <?php endif ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php if (...) ?> ... <?php else ?> ... <?php endif ?>
+        customProperties: null
+        displayName: <?php if (...) ?> ... <?php else ?> ... <?php endif ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '<?php else: ?>'
+        customProperties: null
+        displayName: '<?php else: ?>'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php foreach (...) ... <?php endforeach ?>
+        customProperties: null
+        displayName: <?php foreach (...) ... <?php endforeach ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php $this->... ?>
+        customProperties: null
+        displayName: <?php $this->... ?>
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: <?php echo $this->... ?>
+        customProperties: null
+        displayName: <?php echo $this->... ?>
+        path: bundle.rb
+        scope: null
+      commandName: Wrapped in <?php ?>
+      customProperties: null
+      displayName: Wrapped in <?php ?>
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: if ...
+      customProperties: null
+      displayName: if ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: if ... else ...
+      customProperties: null
+      displayName: if ... else ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: else ...
+      customProperties: null
+      displayName: else ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: elseif ...
+      customProperties: null
+      displayName: elseif ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: for ...
+      customProperties: null
+      displayName: for ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: foreach ...
+      customProperties: null
+      displayName: foreach ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: switch ...
+      customProperties: null
+      displayName: switch ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: case ...
+      customProperties: null
+      displayName: case ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: while ...
+      customProperties: null
+      displayName: while ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: do ... while ...
+      customProperties: null
+      displayName: do ... while ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: class ...
+      customProperties: null
+      displayName: class ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: function ...
+      customProperties: null
+      displayName: function ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Throw Exception
+      customProperties: null
+      displayName: Throw Exception
+      path: bundle.rb
+      scope: null
+    commandName: Declarations
+    customProperties: null
+    displayName: Declarations
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: $GLOBALS['...']
+      customProperties: null
+      displayName: $GLOBALS['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: COOKIE['...']
+      customProperties: null
+      displayName: COOKIE['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: ENV['...']
+      customProperties: null
+      displayName: ENV['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: FILES['...']
+      customProperties: null
+      displayName: FILES['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: GET['...']
+      customProperties: null
+      displayName: GET['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: POST['...']
+      customProperties: null
+      displayName: POST['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: REQUEST['...']
+      customProperties: null
+      displayName: REQUEST['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: SERVER['...']
+      customProperties: null
+      displayName: SERVER['...']
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: SESSION['...']
+      customProperties: null
+      displayName: SESSION['...']
+      path: bundle.rb
+      scope: null
+    commandName: Globals
+    customProperties: null
+    displayName: Globals
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: return
+      customProperties: null
+      displayName: return
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: return true
+      customProperties: null
+      displayName: return true
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: return false
+      customProperties: null
+      displayName: return false
+      path: bundle.rb
+      scope: null
+    commandName: Return
+    customProperties: null
+    displayName: Return
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Documentation for Tag
+      customProperties: null
+      displayName: Documentation for Tag
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Start Docblock
+      customProperties: null
+      displayName: Start Docblock
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Class
+      customProperties: null
+      displayName: Class
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Class Variable
+      customProperties: null
+      displayName: Class Variable
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Constant Definition
+      customProperties: null
+      displayName: Constant Definition
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Function
+      customProperties: null
+      displayName: Function
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Function Signature
+      customProperties: null
+      displayName: Function Signature
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: '-'
+      customProperties: null
+      displayName: '-'
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Header
+      customProperties: null
+      displayName: Header
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Interface
+      customProperties: null
+      displayName: Interface
+      path: bundle.rb
+      scope: null
+    commandName: PHPDoc
+    customProperties: null
+    displayName: PHPDoc
+    path: bundle.rb
+    scope: null
+  commandName: PHP
+  customProperties: null
+  displayName: PHP
+  path: bundle.rb
+  scope: null
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-595825ad-873b-4c5e-b6e1-b28b11c8ea3e,
+  path: bundle.rb, scope: source.php}
 copyright: null
 customProperties: {contact_email_rot_13: pvnjny@tznvy.pbz}
-decreaseIndentMarkers: {}
+decreaseIndentMarkers: &id002 {}
 description: '<a href="http://www.php.net/">PHP</a> is a widely-used general-purpose
   scripting language that is especially suited for web development and can be embedded
   into HTML.
 
   '
 displayName: PHP
-fileTypeRegistry: {}
-fileTypes: []
+fileTypeRegistry: *id002
+fileTypes: *id001
 foldingStartMarkers: {!scope 'source.php': !regexp '(?-mix:(\/\*|\{\s*$|<<<HTML))'}
 foldingStopMarkers: {!scope 'source.php': !regexp '(?-mix:(\*\/|^\s*\}|^HTML;))'}
-increaseIndentMarkers: {}
+increaseIndentMarkers: *id002
 license: null
 licenseUrl: null
 path: bundle.rb
-repository: null
+repository: git://github.com/aptana/php.ruble.git
 visible: true
