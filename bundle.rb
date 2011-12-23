@@ -3,6 +3,7 @@ require 'ruble'
 bundle 'PHP' do |bundle|
   bundle.author = 'Ciarón Walsh'
   bundle.contact_email_rot_13 = 'pvnjny@tznvy.pbz'
+  bundle.repository = "git://github.com/aptana/php.ruble.git"
   bundle.description =  <<END
 <a href="http://www.php.net/">PHP</a> is a widely-used general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
 END

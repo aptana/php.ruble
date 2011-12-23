@@ -356,7 +356,7 @@ children:
   displayName: PHP
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-ee8ee782-6471-4740-bf96-b81f570c5c45,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-d262621b-3b69-4d5b-873c-2f5235d79c89,
   path: bundle.rb, scope: source.php}
 - !!com.aptana.scripting.model.CommandElement
   async: false
@@ -1319,5 +1319,5 @@ increaseIndentMarkers: *id002
 license: null
 licenseUrl: null
 path: bundle.rb
-repository: null
+repository: git://github.com/aptana/php.ruble.git
 visible: true
