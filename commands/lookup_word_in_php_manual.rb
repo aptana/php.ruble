@@ -1,5 +1,6 @@
 require 'ruble'
-command 'Documentation for Word' do |cmd|
+
+command t(:docs_for_word) do |cmd|
   #cmd.key_binding = 'M4+H'
   cmd.scope = 'source.php'
   cmd.output = :show_as_html

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Wrap Docblock at 80 Characters' do |cmd|
+command t(:wrap_docblock) do |cmd|
   cmd.scope = 'comment.block.documentation.phpdoc.php'
   cmd.output = :insert_as_text
   cmd.input = :none

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Documentation for Tag' do |cmd|
+command t(:docs_for_tag) do |cmd|
   #cmd.key_binding = 'M4+H'
   cmd.scope = 'comment.block.documentation.phpdoc.php'
   cmd.output = :show_as_html

@@ -1,21 +1,20 @@
 require 'ruble'
 
-bundle 'PHP' do |bundle|
+bundle t(:bundle_name) do |bundle|
   bundle.author = 'Ciarón Walsh'
   bundle.contact_email_rot_13 = 'pvnjny@tznvy.pbz'
   bundle.repository = "git://github.com/aptana/php.ruble.git"
-  bundle.description =  <<END
-<a href="http://www.php.net/">PHP</a> is a widely-used general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
-END
+  bundle.description =  '<a href="http://www.php.net/">PHP</a> is a widely-used general-purpose scripting language that is especially suited for web development and can be embedded into HTML.'
+  
   start_folding = /(\/\*|\{\s*$|<<<HTML)/
   end_folding = /(\*\/|^\s*\}|^HTML;)/
   bundle.folding['source.php'] = start_folding, end_folding
 
-  bundle.menu 'PHP' do |main_menu|
-    main_menu.command 'Documentation for Word'
+  bundle.menu t(:bundle_name) do |main_menu|
+    main_menu.command t(:docs_for_word)
     main_menu.separator
-    main_menu.menu 'Declarations' do |submenu|
-      submenu.menu 'Wrapped in <?php ?>' do |submenu2|
+    main_menu.menu t(:declarations) do |submenu|
+      submenu.menu t(:wrapped_in_tags) do |submenu2|
         submenu2.command '<?php ... ?>'
         submenu2.command '<?php echo ... ?>'
         submenu2.command '<?php echo htmlentities(...) ?>'
@@ -44,7 +43,7 @@ END
       # submenu.command 'Wrap in try { ... } catch (...) { ... }'
       # submenu.command 'Insert Call to Parent'
     end
-    main_menu.menu 'Globals' do |submenu|
+    main_menu.menu t(:globals) do |submenu|
       submenu.command '$GLOBALS[\'...\']'
       submenu.command 'COOKIE[\'...\']'
       submenu.command 'ENV[\'...\']'
@@ -55,29 +54,29 @@ END
       submenu.command 'SERVER[\'...\']'
       submenu.command 'SESSION[\'...\']'
     end
-    main_menu.menu 'Return' do |submenu|
+    main_menu.menu t(:return) do |submenu|
       submenu.command 'return'
       submenu.command 'return true'
       submenu.command 'return false'
     end
     main_menu.separator
-    main_menu.menu 'PHPDoc' do |submenu|
-      submenu.command 'Documentation for Tag'
+    main_menu.menu t(:phpdoc) do |submenu|
+      submenu.command t(:docs_for_tag)
       submenu.separator
-      submenu.command 'Start Docblock'
+      submenu.command t(:start_docblock)
       #submenu.command 'Post-doc'
       #submenu.command 'Wrap Docblock at 80 Characters'
       submenu.separator
-      submenu.command 'Class'
-      submenu.command 'Class Variable'
+      submenu.command t(:class)
+      submenu.command t(:class_variable)
       submenu.separator
-      submenu.command 'Constant Definition'
+      submenu.command t(:constant_definition)
       submenu.separator
-      submenu.command 'Function'
-      submenu.command 'Function Signature'
+      submenu.command t(:function)
+      submenu.command t(:function_signature)
       submenu.separator
-      submenu.command 'Header'
-      submenu.command 'Interface'
+      submenu.command t(:header)
+      submenu.command t(:interface)
     end
   end
 end
