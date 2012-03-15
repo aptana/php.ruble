@@ -1,10 +1,10 @@
 require 'ruble'
 
-command 'Post-doc' do |cmd|
+command t(:post_doc) do |cmd|
   cmd.scope = 'source.php'
-  cmd.trigger = 'source.php'
-  cmd.output = :insert_as_text
-  cmd.input = :document, :scope
+  cmd.trigger = 'doc'
+  cmd.output = :insert_as_snippet
+  cmd.input = :document
   cmd.invoke do
     next_line = STDIN.read.to_a[ENV['TM_LINE_NUMBER'].to_i..-1].join("\n").strip[/.+$/]
     

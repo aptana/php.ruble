@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Insert Call to Parent' do |cmd|
+command t(:insert_call_to_parent) do |cmd|
   cmd.scope = 'source.php'
   cmd.trigger = 'source.php'
   cmd.output = :insert_as_snippet

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Help' do |cmd|
+command t(:help) do |cmd|
   cmd.scope = 'source.php'
   cmd.output = :show_as_html
   cmd.input = :none
